@@ -1,11 +1,15 @@
 #include"Utilidades.h"
 #include<iostream>
 #include <fstream>
+#include <random>
 using namespace std;
 
 nodo *Utilidades::CrearLista(int num) {
+    default_random_engine generator;
+    uniform_int_distribution<int> distribution(1 ,100);
+    int dice_roll = distribution(generator);
     nodo *list = nullptr;
-    for (int j = 0; j <  num; j++) {
+    for (int i = 0; i <  num; i++) {
         InsertarFinal(list, rand() % 100);
     }
     return list;
@@ -19,7 +23,7 @@ void Utilidades::ImprimirLista(nodo *list) {
 }
 
 void Utilidades::OrdenarLista(nodo *list) {
-    cout<<"****Ordenamiento****\n";
+    cout<<"-----Ordenamiento-----\n";
     nodo *inicio=list;
     while (inicio!=nullptr) {
         nodo *att=inicio->ant;
