@@ -13,7 +13,7 @@ nodo *Utilidades::CrearLista(int num) {
 
 void Utilidades::ImprimirLista(nodo *list) {
     while (list != nullptr) {
-        cout << "Numeros: " << list->data<<endl;
+        cout << "Numeros: "  << list->data<<endl;
         list = list->ant;
     }
 }
@@ -52,18 +52,19 @@ void Utilidades::GuardarLista(nodo *Lista) {
 
 
 void Utilidades::InsertarFinal(nodo *&list ,int num) {
-    nodo *nodo=new nodo();
-    nodo->data = num;
-    nodo->sig = nullptr;
-    nodo->ant = nullptr;
+    nodo *Nnodo=new nodo();
+    Nnodo->sig = nullptr;
+    Nnodo->ant = nullptr;
+    Nnodo->data = num;
+
 
     if (list == nullptr) {
-        list = nodo;
+        list = Nnodo;
     }
     else {
-        list->sig = nodo;
-        nodo->ant = list;
-        list = nodo;
+        list->sig = Nnodo;
+        Nnodo->ant = list;
+        list = Nnodo;
 
     }
 

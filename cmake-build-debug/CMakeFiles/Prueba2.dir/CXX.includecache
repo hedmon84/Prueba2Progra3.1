@@ -13,8 +13,6 @@ iostream
 -
 fstream
 -
-stdlib.h
--
 
 /cygdrive/c/Users/Erick Nisbeth/Desktop/Prueba2/Utilidades.h
 
@@ -22,7 +20,5 @@ stdlib.h
 Utilidades.h
 /cygdrive/c/Users/Erick Nisbeth/Desktop/Prueba2/Utilidades.h
 iostream
--
-stdlib.h
 -
 
