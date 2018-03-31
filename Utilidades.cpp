@@ -4,30 +4,31 @@
 #include<stdlib.h>
 using namespace std;
 
-nodo *Utilidades::CrearLista(int numero) {
-    nodo *lista = NULL;
-    for (int x = 0; x < numero; x++) {
-        InsertarFinal(lista, rand() % 1000);
+nodo *Utilidades::CrearLista(int N) {
+    nodo *list = nullptr;
+    for (int x = 0; x < N; x++) {
+        InsertarFinal(list, rand() % 100);
     }
-    return lista;
+    return list;
 }
 
-void Utilidades::ImprimirLista(nodo *Lista) {
-    while (Lista != NULL) {
-        cout << "Elemento :" << Lista->dato<<endl;
-        Lista = Lista->ant;
+void Utilidades::ImprimirLista(nodo *list) {
+    while (list != nullptr) {
+        cout << "Numeros: " << list->data<<endl;
+        list = list->ant;
     }
 }
 
-void Utilidades::OrdenarLista(nodo *lista) {
-    nodo *p=lista;
-    while (p!=NULL) {
+void Utilidades::OrdenarLista(nodo *list) {
+    cout<<"****Ordenamiento****\n";
+    nodo *p=list;
+    while (p!=nullptr) {
         nodo *j=p->ant;
-        while (j != NULL) {
-            if (p->dato < j->dato) {
-                int aux = j->dato;
-                j->dato = p->dato;
-                p->dato = aux;
+        while (j != nullptr) {
+            if (p->data < j->data) {
+                int aux = j->data;
+                j->data = p->data;
+                p->data = aux;
             }
             j = j->ant;
         }
@@ -44,7 +45,7 @@ void Utilidades::GuardarLista(nodo *Lista) {
         return;
     }
     while (Lista != NULL) {
-        archivo << Lista->dato << ' ';
+        archivo << Lista->data << ' ';
         Lista = Lista->ant;
     }
     archivo.close();
@@ -53,7 +54,7 @@ void Utilidades::GuardarLista(nodo *Lista) {
 
 void Utilidades::InsertarFinal(nodo *&Lista ,int dato) {
     nodo *nuevo_nodo=new nodo();
-    nuevo_nodo->dato = dato;
+    nuevo_nodo->data = dato;
     nuevo_nodo->sig = NULL;
     nuevo_nodo->ant = NULL;
 

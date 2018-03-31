@@ -4,9 +4,10 @@
 
 struct  nodo
 {
-    int dato;
+
     nodo*sig;
     nodo*ant;
+    int data;
 };
 
 class Utilidades {
