@@ -1,16 +1,17 @@
 #include "Utilidades.h"
-
 #include<iostream>
-#include<stdlib.h>
+
 using namespace std;
 int main(){
-    Utilidades n;
-    nodo *Lista = nullptr;
-    nodo *Lista2 = n.CrearLista(10);
-    n.InsertarFinal(Lista,2);
-    n.InsertarFinal(Lista, 3);
-    n.ImprimirLista(Lista2);
-    n.OrdenarLista(Lista2);
-    n.ImprimirLista(Lista2);
-    n.GuardarLista(Lista2);
+    Utilidades Create;
+    nodo *list = nullptr;
+    nodo *list2 = Create.CrearLista(10);
+    Create.InsertarFinal(list,2);
+    Create.InsertarFinal(list, 3);
+    Create.ImprimirLista(list2);
+    Create.OrdenarLista(list2);
+    Create.ImprimirLista(list2);
+    Create.GuardarLista(list2);
+
+
 }

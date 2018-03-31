@@ -1,12 +1,11 @@
 #include"Utilidades.h"
 #include<iostream>
 #include <fstream>
-#include<stdlib.h>
 using namespace std;
 
-nodo *Utilidades::CrearLista(int N) {
+nodo *Utilidades::CrearLista(int num) {
     nodo *list = nullptr;
-    for (int x = 0; x < N; x++) {
+    for (int j = 0; j <  num; j++) {
         InsertarFinal(list, rand() % 100);
     }
     return list;
@@ -21,18 +20,18 @@ void Utilidades::ImprimirLista(nodo *list) {
 
 void Utilidades::OrdenarLista(nodo *list) {
     cout<<"****Ordenamiento****\n";
-    nodo *p=list;
-    while (p!=nullptr) {
-        nodo *j=p->ant;
-        while (j != nullptr) {
-            if (p->data < j->data) {
-                int aux = j->data;
-                j->data = p->data;
-                p->data = aux;
+    nodo *inicio=list;
+    while (inicio!=nullptr) {
+        nodo *att=inicio->ant;
+        while (att != nullptr) {
+            if (inicio->data < att->data) {
+                int j = att->data;
+                att->data = inicio->data;
+                inicio->data = j;
             }
-            j = j->ant;
+            att = att->ant;
         }
-        p = p->ant;
+        inicio = inicio->ant;
     }
 
 }
