@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Erick Nisbeth/Desktop/Prueba2/Utilidades.cpp
+Utilidades.h
+/cygdrive/c/Users/Erick Nisbeth/Desktop/Prueba2/Utilidades.h
+iostream
+-
+fstream
+-
+stdlib.h
+-
+
+/cygdrive/c/Users/Erick Nisbeth/Desktop/Prueba2/Utilidades.h
+
+/cygdrive/c/Users/Erick Nisbeth/Desktop/Prueba2/main.cpp
+Utilidades.h
+/cygdrive/c/Users/Erick Nisbeth/Desktop/Prueba2/Utilidades.h
+iostream
+-
+stdlib.h
+-
+

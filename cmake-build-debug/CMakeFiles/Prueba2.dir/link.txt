@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Prueba2.dir/main.cpp.o CMakeFiles/Prueba2.dir/Utilidades.cpp.o  -o Prueba2.exe -Wl,--out-implib,libPrueba2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
