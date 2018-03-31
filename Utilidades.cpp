@@ -51,19 +51,19 @@ void Utilidades::GuardarLista(nodo *Lista) {
 }
 
 
-void Utilidades::InsertarFinal(nodo *&Lista ,int dato) {
-    nodo *nuevo_nodo=new nodo();
-    nuevo_nodo->data = dato;
-    nuevo_nodo->sig = NULL;
-    nuevo_nodo->ant = NULL;
+void Utilidades::InsertarFinal(nodo *&list ,int num) {
+    nodo *nodo=new nodo();
+    nodo->data = num;
+    nodo->sig = nullptr;
+    nodo->ant = nullptr;
 
-    if (Lista == NULL) {
-        Lista = nuevo_nodo;
+    if (list == nullptr) {
+        list = nodo;
     }
     else {
-        Lista->sig = nuevo_nodo;
-        nuevo_nodo->ant = Lista;
-        Lista = nuevo_nodo;
+        list->sig = nodo;
+        nodo->ant = list;
+        list = nodo;
 
     }
 
